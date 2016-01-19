@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>WebVTT</title>
+	<script src="components/underscore/underscore.js"></script>
+	<script src="components/captionator/captionator.js"></script>
+	<script src="js/app.js"></script>
+	<style type="text/css" media="screen">
+		#thumb {
+			background-image: url('assets/images/bigbuck-sheet.png'); 
+			width: 128px;
+			height: 64px;
+		}
+	</style>
+</head>
+<body>
+
+<video id="player" width="500" height="375" controls>
+    <source type="video/mp4" src="assets/media/bigbuck.mp4" />
+    <track kind="subtitles" src="assets/vtt/bigbuck-sheet.vtt" srclang="en" default />
+</video>
+
+	<script>
+		window.addEventListener('load',function(event) {
+	        playerApp = new App(document.getElementById('player'));
+	        
+	    });
+	</script>
+	<!-- <img src="assets/images/bigbuck.jpg" alt=""> -->
+	<div id="thumb"></div>
+</body>
+</html>
